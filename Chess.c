@@ -34,5 +34,5 @@ void PrintBoard(int array[])
 		{
 			printf("  |");
 		}
-	}
+		printf("------");	}
 }
