@@ -26,13 +26,16 @@ int main()
 	}
 }
 
-void PrintBoard(int array[])
+void display_board(char board[ROW][COL], int row, int col)
 {
-	for (int i = 0; i < ROW; i++)
+	int i = 0;
+	for (i = 0; i<row; i++)
 	{
-		for (int j = 0; j < COL; j++)
+		printf(" %c | %c | %c \n", board[i][0], board[i][1], board[i][2]);
+		if (i != row)
 		{
-			printf("  |");
+			printf("---|---|---\n");
+
 		}
-		printf("------");	}
+	}
 }
