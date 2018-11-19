@@ -26,7 +26,12 @@ int main()
 	}
 }
 
-void display_board(char board[ROW][COL], int row, int col)
+void Init_board(char board[ROW][COL])
+{
+	memset(board, ' ', sizeof(char board[0][0])*row*col);
+}
+
+void Display_board(char board[ROW][COL], int row, int col)
 {
 	int i = 0;
 	for (i = 0; i<row; i++)
