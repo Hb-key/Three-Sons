@@ -1,5 +1,5 @@
 #include"Chess.h"
-
+//åˆå§‹åŒ–æ£‹ç›˜
 void Init_board(char board[ROW][COL], int row, int col)
 {
 	memset(&board[0][0], ' ', sizeof(board[0][0])*row*col);
@@ -31,10 +31,10 @@ void Player_move(char board[ROW][COL], int row, int col)
 {
 	int x = 0;
 	int y = 0;
-	printf("Íæ¼Ò×ßÆå,");
+	printf("çŽ©å®¶èµ°æ£‹,");
 	while (1)
 	{
-		printf("ÇëÊäÈë×ø±ê£º\n");
+		printf("è¯·è¾“å…¥åæ ‡ï¼š\n");
 		scanf("%d%d", &x, &y);
 		if (x >= 1 && x <= row && y>=1 && y <= col)
 		{
@@ -45,12 +45,12 @@ void Player_move(char board[ROW][COL], int row, int col)
 			}
 			else
 			{
-				printf("´Ë×ø±êÒÑÓÐÆå×Ó£¡\n");
+				printf("æ­¤åæ ‡å·²æœ‰æ£‹å­ï¼\n");
 			}
 		}
 		else
 		{
-			printf("ÊäÈëµÄ×ø±ê²»´æÔÚ£¡\n");
+			printf("è¾“å…¥çš„åæ ‡ä¸å­˜åœ¨ï¼\n");
 		}
 	}
 }
@@ -59,7 +59,7 @@ void Computer_move(char board[ROW][COL], int row, int col)
 {
 	int x = 0;
 	int y = 0;
-	printf("µçÄÔ×ßÆå£º\n");
+	printf("ç”µè„‘èµ°æ£‹ï¼š\n");
 	while (1)
 	{
 		x = rand() % row;
@@ -137,15 +137,15 @@ void Game()
 	}
 	if (ret == 'X')
 	{
-		printf("À÷º¦°¡£¬ÐÖµÜ£¬ÄãÓ®ÁË£¡\n");
+		printf("åŽ‰å®³å•Šï¼Œå…„å¼Ÿï¼Œä½ èµ¢äº†ï¼\n");
 	}
 	else if (ret == '0')
 	{
-		printf("µçÄÔÓ®ÁË£¬ÔÙÀ´Ò»°ÑÂð£¿\n");
+		printf("ç”µè„‘èµ¢äº†ï¼Œå†æ¥ä¸€æŠŠå—ï¼Ÿ\n");
 	}
 	else if (ret == 'f')
 	{
-		printf("Æ½¾Ö£¬ÔÙÀ´Ò»¾Ö°É£¿£¡\n");
+		printf("å¹³å±€ï¼Œå†æ¥ä¸€å±€å§ï¼Ÿï¼\n");
 	}
 }
 
@@ -156,7 +156,7 @@ void Test()
 	do
 	{
 		menu();
-		printf("ÇëÑ¡Ôñ£º");
+		printf("è¯·é€‰æ‹©ï¼š");
 		scanf("%d", &input);
 		switch (input)
 		{
@@ -164,10 +164,10 @@ void Test()
 			Game();
 			break;
 		case 0:
-			printf("ÍË³ö£¡\n");
+			printf("é€€å‡ºï¼\n");
 			break;
 		default:
-			printf("ÊäÈë´íÁË£¬¿ìÖØÐÂÊäÈë£º\n");
+			printf("è¾“å…¥é”™äº†ï¼Œå¿«é‡æ–°è¾“å…¥ï¼š\n");
 			break;
 		}
 	} while (input);
