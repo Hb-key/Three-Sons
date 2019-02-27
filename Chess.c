@@ -5,6 +5,7 @@ void Init_board(char board[ROW][COL], int row, int col)
 	memset(&board[0][0], ' ', sizeof(board[0][0])*row*col);
 }
 
+//显示棋盘
 void Display_board(char board[ROW][COL], int row, int col)
 {
 	for (int i = 0; i<row; i++)
